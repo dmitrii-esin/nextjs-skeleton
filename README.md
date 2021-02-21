@@ -36,23 +36,23 @@ Find the configs in the repository and don't forget to set up your working IDE e
 ├── styles/
 ├── public/
 ├── components/
-│ ├── component-a/
-│ ├── component-b/
-│ └── component-c/
-│ ├── index.ts
-│ ├── component-name.tsx
-│ └── component-name.module.scss
+│   ├── component-a/
+│   ├── component-b/
+│   └── component-c/
+│       ├── index.ts
+│       ├── component-name.tsx
+│       └── component-name.module.scss
 └── features/
-├── feature-a/
-├── feature-b/
-└── feature-c/
-├── index.ts
-├── feature-name.tsx
-├── feature-name.test.tsx
-├── feature-name.store.ts
-├── feature-name.utils.ts
-├── feature-name.data-access.ts
-└── feature-name.module.scss
+    ├── feature-a/
+    ├── feature-b/
+    └── feature-c/
+        ├── index.ts
+        ├── feature-name.tsx
+        ├── feature-name.test.tsx
+        ├── feature-name.store.ts
+        ├── feature-name.utils.ts
+        ├── feature-name.data-access.ts
+        └── feature-name.module.scss
 ```
 
 -   pages/ - page wrapper components without business-logic, we are able to store here only routing settings, error handling, page layout styles and server-side data-fetching
