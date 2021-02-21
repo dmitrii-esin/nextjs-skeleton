@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product renders correctly 1`] = `
+<div>
+  <hr
+    class="MuiDivider-root"
+  />
+  <div
+    class="container"
+  >
+    Product page
+  </div>
+</div>
+`;
