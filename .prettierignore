@@ -1,0 +1,4 @@
+.next/
+package.json
+bin
+# *.d.ts

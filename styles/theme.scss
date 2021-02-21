@@ -1,0 +1,23 @@
+$black: #000000;
+$white: #ffffff;
+$baseFontSize: 20px;
+
+// typography
+$font-xl: (52px, 64px);
+$font-l: (20px, 24px);
+$font-s: (16px, 22px);
+$font-normal: 400;
+$font-medium: 500;
+$font-bold: 700;
+$font-extra-bold: 900;
+
+// colors
+$color-gray-main: #313031;
+$color-gray-medium: #7a7a7a;
+
+// mixins
+@mixin font($font: $font-s, $weight: $font-normal) {
+    font-size: nth($font, 1);
+    line-height: nth($font, 2);
+    font-weight: $weight;
+}
