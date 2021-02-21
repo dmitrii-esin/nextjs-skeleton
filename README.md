@@ -29,6 +29,7 @@ Find the configs in the repository and don't forget to set up your working IDE e
 
 ## Project structure
 
+```
 ./
 ├── pages/
 ├── common/
@@ -52,6 +53,7 @@ Find the configs in the repository and don't forget to set up your working IDE e
 ├── feature-name.utils.ts
 ├── feature-name.data-access.ts
 └── feature-name.module.scss
+```
 
 -   pages/ - page wrapper components without business-logic, we are able to store here only routing settings, error handling, page layout styles and server-side data-fetching
 
