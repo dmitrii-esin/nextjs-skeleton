@@ -22,16 +22,14 @@ npm run dev
 ## Git usage agreements and IDE settings
 
 1. Git usage agreements: (..._define your rules_...)
-
 2. We use LF instead of CRLF
-
 3. We use editorconfig, eslint, prettier and husky for the automatic code formatting and ensuring our code quality
 
 Find the configs in the repository and don't forget to set up your working IDE environment to work with these configs
 
 ## Project structure
 
-frontend/
+./
 ├── pages/
 ├── common/
 ├── styles/
@@ -49,11 +47,11 @@ frontend/
 └── feature-c/
 ├── index.ts
 ├── feature-name.tsx
-├── feature-name.module.scss
 ├── feature-name.test.tsx
 ├── feature-name.store.ts
 ├── feature-name.utils.ts
-└── data-access.ts
+├── feature-name.data-access.ts
+└── feature-name.module.scss
 
 -   pages/ - page wrapper components without business-logic, we are able to store here only routing settings, error handling, page layout styles and server-side data-fetching
 
@@ -72,25 +70,19 @@ frontend/
 ## Naming rules
 
 -   We use business terms, names of back-end entities and component names from Figma to name our modules (according to "Domain Driven Design")
-
 -   We use kebab-case for the file names
-
 -   We use camelCase and PascalCase for the functions and classes
-
 -   We use UPPERCASE for the constant names
-
 -   In other cases we are guided by best practices
 
 ## Testing
 
 We write tests only for the basic usage cases of completed features and critical or algorithmically complex code sections
-
 For example completed feature component from "features/" folder or complicated helper function or utility should be covered by tests
 
 ## State management
 
 -   We use [React local state](https://reactjs.org/docs/hooks-reference.html#usestate) and [React context](https://reactjs.org/docs/context.html) for the state management in ordinary situations
-
 -   In other cases we are able to use browser storages, cache and other specific tools like [SWR](https://swr.vercel.app/getting-started)
 
 ## Data-fetching
@@ -110,7 +102,6 @@ We use "Responsive web design" concepts in accordance with our vision without us
 ## Pull requests
 
 -   Pull request can be merged if there are 2 or more approvals
-
 -   Pull request can only be merged by its initiator
 
 ## CI/CD

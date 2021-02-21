@@ -61,17 +61,11 @@ npm run dev
         <h1 id="-frontend-conventions">📃 Frontend conventions</h1>
         <h2 id="git-usage-agreements-and-ide-settings">Git usage agreements and IDE settings</h2>
         <ol>
+            <li>Git usage agreements: (...<em>define your rules</em>...)</li>
+            <li>We use LF instead of CRLF</li>
             <li>
-                <p>Git usage agreements: (...<em>define your rules</em>...)</p>
-            </li>
-            <li>
-                <p>We use LF instead of CRLF</p>
-            </li>
-            <li>
-                <p>
-                    We use editorconfig, eslint, prettier and husky for the automatic code
-                    formatting and ensuring our code quality
-                </p>
+                We use editorconfig, eslint, prettier and husky for the automatic code formatting
+                and ensuring our code quality
             </li>
         </ol>
         <p>
@@ -80,7 +74,7 @@ npm run dev
         </p>
         <h2 id="project-structure">Project structure</h2>
         <p>
-            frontend/<br />
+            ./<br />
             ├── pages/<br />
             ├── common/<br />
             ├── styles/<br />
@@ -98,11 +92,11 @@ npm run dev
             └── feature-c/<br />
             ├── index.ts<br />
             ├── feature-name.tsx<br />
-            ├── feature-name.module.scss<br />
             ├── feature-name.test.tsx<br />
             ├── feature-name.store.ts<br />
             ├── feature-name.utils.ts<br />
-            └── data-access.ts
+            ├── feature-name.data-access.ts<br />
+            └── feature-name.module.scss
         </p>
         <ul>
             <li>
@@ -138,50 +132,34 @@ npm run dev
         <h2 id="naming-rules">Naming rules</h2>
         <ul>
             <li>
-                <p>
-                    We use business terms, names of back-end entities and component names from Figma
-                    to name our modules (according to &quot;Domain Driven Design&quot;)
-                </p>
+                We use business terms, names of back-end entities and component names from Figma to
+                name our modules (according to &quot;Domain Driven Design&quot;)
             </li>
-            <li>
-                <p>We use kebab-case for the file names</p>
-            </li>
-            <li>
-                <p>We use camelCase and PascalCase for the functions and classes</p>
-            </li>
-            <li>
-                <p>We use UPPERCASE for the constant names</p>
-            </li>
-            <li>
-                <p>In other cases we are guided by best practices</p>
-            </li>
+            <li>We use kebab-case for the file names</li>
+            <li>We use camelCase and PascalCase for the functions and classes</li>
+            <li>We use UPPERCASE for the constant names</li>
+            <li>In other cases we are guided by best practices</li>
         </ul>
         <h2 id="testing">Testing</h2>
         <p>
             We write tests only for the basic usage cases of completed features and critical or
-            algorithmically complex code sections
-        </p>
-        <p>
+            algorithmically complex code sections<br />
             For example completed feature component from &quot;features/&quot; folder or complicated
             helper function or utility should be covered by tests
         </p>
         <h2 id="state-management">State management</h2>
         <ul>
             <li>
-                <p>
-                    We use
-                    <a href="https://reactjs.org/docs/hooks-reference.html#usestate"
-                        >React local state</a
-                    >
-                    and <a href="https://reactjs.org/docs/context.html">React context</a> for the
-                    state management in ordinary situations
-                </p>
+                We use
+                <a href="https://reactjs.org/docs/hooks-reference.html#usestate"
+                    >React local state</a
+                >
+                and <a href="https://reactjs.org/docs/context.html">React context</a> for the state
+                management in ordinary situations
             </li>
             <li>
-                <p>
-                    In other cases we are able to use browser storages, cache and other specific
-                    tools like <a href="https://swr.vercel.app/getting-started">SWR</a>
-                </p>
+                In other cases we are able to use browser storages, cache and other specific tools
+                like <a href="https://swr.vercel.app/getting-started">SWR</a>
             </li>
         </ul>
         <h2 id="data-fetching">Data-fetching</h2>
@@ -223,12 +201,8 @@ npm run dev
         </p>
         <h2 id="pull-requests">Pull requests</h2>
         <ul>
-            <li>
-                <p>Pull request can be merged if there are 2 or more approvals</p>
-            </li>
-            <li>
-                <p>Pull request can only be merged by its initiator</p>
-            </li>
+            <li>Pull request can be merged if there are 2 or more approvals</li>
+            <li>Pull request can only be merged by its initiator</li>
         </ul>
         <h2 id="cicd">CI/CD</h2>
         <p>...<em>define your rules</em>...</p>
