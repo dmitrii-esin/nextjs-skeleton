@@ -1,59 +1,86 @@
 <!DOCTYPE html>
-    <html>
+<html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" />
         <title>nextjs-skeleton</title>
+        <style></style>
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css"
+        />
         <style>
-</style>
-        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
-<style>
             body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", system-ui,
+                    "Ubuntu", "Droid Sans", sans-serif;
                 font-size: 14px;
                 line-height: 1.6;
             }
         </style>
         <style>
-.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
-</style>
-        
-        
-        
+            .task-list-item {
+                list-style-type: none;
+            }
+            .task-list-item-checkbox {
+                margin-left: -20px;
+                vertical-align: middle;
+            }
+        </style>
     </head>
     <body class="vscode-body vscode-light">
         <h1 id="nextjs-skeleton">nextjs-skeleton</h1>
-<p>This is a <a href="https://nextjs.org/">Next.js</a> project bootstrapped with <a href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"><code>create-next-app</code></a>, <a href="https://www.typescriptlang.org/">typescript</a>, <a href="https://material-ui.com/">material-ui</a> and <a href="https://sass-lang.com/">sass</a></p>
-<h2 id="requirements">Requirements</h2>
-<ul>
-<li>NodeJS 14+</li>
-</ul>
-<h2 id="developers-guide">Developers guide</h2>
-<ol>
-<li>Setup:</li>
-</ol>
-<pre><code class="language-bash"><div>npm install
+        <p>
+            This is a <a href="https://nextjs.org/">Next.js</a> project bootstrapped with
+            <a href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"
+                ><code>create-next-app</code></a
+            >, <a href="https://www.typescriptlang.org/">typescript</a>,
+            <a href="https://material-ui.com/">material-ui</a> and
+            <a href="https://sass-lang.com/">sass</a>
+        </p>
+        <h2 id="requirements">Requirements</h2>
+        <ul>
+            <li>NodeJS 14+</li>
+        </ul>
+        <h2 id="developers-guide">Developers guide</h2>
+        <ol>
+            <li>Setup:</li>
+        </ol>
+        <pre><code class="language-bash"><div>npm install
 npm run dev
 </div></code></pre>
-<ol start="2">
-<li>Open <a href="http://localhost:3000">http://localhost:3000</a> with your browser to see the result.</li>
-</ol>
-<h1 id="-frontend-conventions">📃 Frontend conventions</h1>
-<h2 id="git-usage-agreements-and-ide-settings">Git usage agreements and IDE settings</h2>
-<ol>
-<li>Git usage agreements: (...<em>define your rules</em>...)</li>
-<li>We use LF instead of CRLF</li>
-<li>We use editorconfig, eslint, prettier and husky for the automatic code formatting and ensuring our code quality</li>
-</ol>
-<p>Find the configs in the repository and don't forget to set up your working IDE environment to work with these configs</p>
-<h2 id="project-structure">Project structure</h2>
-<pre><code><code><div>./
+        <ol start="2">
+            <li>
+                Open <a href="http://localhost:3000">http://localhost:3000</a> with your browser to
+                see the result.
+            </li>
+        </ol>
+        <h1 id="-frontend-conventions">📃 Frontend conventions</h1>
+        <h2 id="git-usage-agreements-and-ide-settings">Git usage agreements and IDE settings</h2>
+        <ol>
+            <li>Git usage agreements: (...<em>define your rules</em>...)</li>
+            <li>We use LF instead of CRLF</li>
+            <li>
+                We use editorconfig, eslint, prettier and husky for the automatic code formatting
+                and ensuring our code quality
+            </li>
+        </ol>
+        <p>
+            Find the configs in the repository and don't forget to set up your working IDE
+            environment to work with these configs
+        </p>
+        <h2 id="project-structure">Project structure</h2>
+        <pre><code><code><div>./
 ├── pages/
 ├── common/
 ├── styles/
 ├── public/
+├── types/
 ├── components/
+│   ├── layouts/
 │   ├── component-a/
 │   ├── component-b/
 │   └── component-c/
@@ -72,45 +99,113 @@ npm run dev
         ├── feature-name.data-access.ts
         └── feature-name.module.scss
 </div></code></code></pre>
-<ul>
-<li>pages/ - page wrapper components without business-logic, we are able to store here only routing settings, error handling, page layout styles and server-side data-fetching</li>
-<li>common/ - shared utils, constants, helpers, etc.</li>
-<li>styles/ - global styles</li>
-<li>public/ - raw icons, fonts, images, and other assets</li>
-<li>components/ - shared reusable presentation components, icon components and layout components without business-logic and data-fetching</li>
-<li>features/ - feature-specific components with business-logic and client-side data-fetching (business domain layer)</li>
-</ul>
-<p>*We use index files for the export components</p>
-<h2 id="naming-rules">Naming rules</h2>
-<ul>
-<li>We use business terms, names of back-end entities and component names from Figma to name our modules (according to &quot;Domain Driven Design&quot;)</li>
-<li>We use kebab-case for the file names</li>
-<li>We use camelCase and PascalCase for the functions and classes</li>
-<li>We use UPPERCASE for the constant names</li>
-<li>In other cases we are guided by best practices</li>
-</ul>
-<h2 id="testing">Testing</h2>
-<p>We write tests only for the basic usage cases of completed features and critical or algorithmically complex code sections<br>
-For example completed feature component from &quot;features/&quot; folder or complicated helper function or utility should be covered by tests</p>
-<h2 id="state-management">State management</h2>
-<ul>
-<li>We use <a href="https://reactjs.org/docs/hooks-reference.html#usestate">React local state</a> and <a href="https://reactjs.org/docs/context.html">React context</a> for the state management in ordinary situations</li>
-<li>In other cases we are able to use browser storages, cache and other specific tools like <a href="https://swr.vercel.app/getting-started">SWR</a></li>
-</ul>
-<h2 id="data-fetching">Data-fetching</h2>
-<p>We use basic <a href="https://nextjs.org/docs/basic-features/data-fetching">NextJS recommendations</a> for the data-fetching</p>
-<p>*Clarification:</p>
-<p>In case of client-side data-fetching we should fetch data from feature-specific components (frontend/features) by using React hooks with wrapper for the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a> and <a href="https://swr.vercel.app/getting-started">SWR</a></p>
-<p>In case of server-side data-fetching we should fetch data from page wrapper components (frontend/pages) by using <a href="https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation">getStaticProps</a> and <a href="https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering">getServerSideProps</a> with wrapper for the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a></p>
-<h2 id="adaptive-and-responsive-web-design-concepts">Adaptive and responsive web design concepts</h2>
-<p>We use &quot;Responsive web design&quot; concepts in accordance with our vision without using a grid</p>
-<h2 id="pull-requests">Pull requests</h2>
-<ul>
-<li>Pull request can be merged if there are 2 or more approvals</li>
-<li>Pull request can only be merged by its initiator</li>
-</ul>
-<h2 id="cicd">CI/CD</h2>
-<p>...<em>define your rules</em>...</p>
-
+        <ul>
+            <li>
+                pages/ - page wrapper components without business-logic, we are able to store here
+                only routing settings, error handling and server-side data-fetching
+            </li>
+            <li>common/ - shared utils, constants, helpers, etc.</li>
+            <li>styles/ - global styles</li>
+            <li>public/ - raw icons, fonts, images, and other assets</li>
+            <li>types/ - shared interfaces</li>
+            <li>
+                components/ - shared reusable presentation components, icon components and layout
+                components without business-logic and data-fetching
+            </li>
+            <li>
+                components/layouts/ - shared reusable layout components based on
+                <a href="https://www.tomasgildev.com/posts/next-persistent-layout-typescript"
+                    >react layout pattern</a
+                >
+            </li>
+            <li>
+                features/ - feature-specific components with business-logic and client-side
+                data-fetching (business domain layer)
+            </li>
+        </ul>
+        <p>
+            *We use index files for the export components<br />
+            *Additionally, please react this article about implementation of
+            <a href="https://www.tomasgildev.com/posts/next-persistent-layout-typescript"
+                >react layout pattern</a
+            >.
+        </p>
+        <h2 id="naming-rules">Naming rules</h2>
+        <ul>
+            <li>
+                We use business terms, names of back-end entities and component names from Figma to
+                name our modules (according to &quot;Domain Driven Design&quot;)
+            </li>
+            <li>We use kebab-case for the file names</li>
+            <li>We use camelCase and PascalCase for the functions and classes</li>
+            <li>We use UPPERCASE for the constant names</li>
+            <li>In other cases we are guided by best practices</li>
+        </ul>
+        <h2 id="testing">Testing</h2>
+        <p>
+            We write tests only for the basic usage cases of completed features and critical or
+            algorithmically complex code sections<br />
+            For example completed feature component from &quot;features/&quot; folder or complicated
+            helper function or utility should be covered by tests
+        </p>
+        <h2 id="state-management">State management</h2>
+        <ul>
+            <li>
+                We use
+                <a href="https://reactjs.org/docs/hooks-reference.html#usestate"
+                    >React local state</a
+                >
+                and <a href="https://reactjs.org/docs/context.html">React context</a> for the state
+                management in ordinary situations
+            </li>
+            <li>
+                In other cases we are able to use browser storages, cache and other specific tools
+                like <a href="https://swr.vercel.app/getting-started">SWR</a>
+            </li>
+        </ul>
+        <h2 id="data-fetching">Data-fetching</h2>
+        <p>
+            We use basic
+            <a href="https://nextjs.org/docs/basic-features/data-fetching"
+                >NextJS recommendations</a
+            >
+            for the data-fetching
+        </p>
+        <p>*Clarification:</p>
+        <p>
+            In case of client-side data-fetching we should fetch data from feature-specific
+            components (frontend/features) by using React hooks with wrapper for the
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a> and
+            <a href="https://swr.vercel.app/getting-started">SWR</a>
+        </p>
+        <p>
+            In case of server-side data-fetching we should fetch data from page wrapper components
+            (frontend/pages) by using
+            <a
+                href="https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation"
+                >getStaticProps</a
+            >
+            and
+            <a
+                href="https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering"
+                >getServerSideProps</a
+            >
+            with wrapper for the
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a>
+        </p>
+        <h2 id="adaptive-and-responsive-web-design-concepts">
+            Adaptive and responsive web design concepts
+        </h2>
+        <p>
+            We use &quot;Responsive web design&quot; concepts in accordance with our vision without
+            using a grid
+        </p>
+        <h2 id="pull-requests">Pull requests</h2>
+        <ul>
+            <li>Pull request can be merged if there are 2 or more approvals</li>
+            <li>Pull request can only be merged by its initiator</li>
+        </ul>
+        <h2 id="cicd">CI/CD</h2>
+        <p>...<em>define your rules</em>...</p>
     </body>
-    </html>
+</html>

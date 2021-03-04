@@ -1,15 +1,15 @@
 import { NextPage } from "next";
 import { PageDefault } from "components/layouts/page-default";
 
-export type IIndexPageType = React.FC &
+export type ICartPageType = React.FC &
     NextPage & {
         layout: typeof PageDefault;
     };
 
-const Index: IIndexPageType = () => {
-    return <div>index page</div>;
+const Cart: ICartPageType = () => {
+    return <div>cart page</div>;
 };
 
-Index.layout = PageDefault;
+Cart.layout = PageDefault;
 
-export default Index;
+export default Cart;

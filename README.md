@@ -35,7 +35,9 @@ Find the configs in the repository and don't forget to set up your working IDE e
 ├── common/
 ├── styles/
 ├── public/
+├── types/
 ├── components/
+│   ├── layouts/
 │   ├── component-a/
 │   ├── component-b/
 │   └── component-c/
@@ -55,11 +57,13 @@ Find the configs in the repository and don't forget to set up your working IDE e
         └── feature-name.module.scss
 ```
 
--   pages/ - page wrapper components without business-logic, we are able to store here only routing settings, error handling, layout components and server-side data-fetching
+-   pages/ - page wrapper components without business-logic, we are able to store here only routing settings, error handling and server-side data-fetching
 -   common/ - shared utils, constants, helpers, etc.
 -   styles/ - global styles
 -   public/ - raw icons, fonts, images, and other assets
+-   types/ - shared interfaces
 -   components/ - shared reusable presentation components, icon components and layout components without business-logic and data-fetching
+-   components/layouts/ - shared reusable layout components based on [react layout pattern](https://www.tomasgildev.com/posts/next-persistent-layout-typescript)
 -   features/ - feature-specific components with business-logic and client-side data-fetching (business domain layer)
 
 *We use index files for the export components
