@@ -55,7 +55,7 @@ Find the configs in the repository and don't forget to set up your working IDE e
         └── feature-name.module.scss
 ```
 
--   pages/ - page wrapper components without business-logic, we are able to store here only routing settings, error handling, page layout styles and server-side data-fetching
+-   pages/ - page wrapper components without business-logic, we are able to store here only routing settings, error handling, layout components and server-side data-fetching
 -   common/ - shared utils, constants, helpers, etc.
 -   styles/ - global styles
 -   public/ - raw icons, fonts, images, and other assets
@@ -63,6 +63,7 @@ Find the configs in the repository and don't forget to set up your working IDE e
 -   features/ - feature-specific components with business-logic and client-side data-fetching (business domain layer)
 
 *We use index files for the export components
+*Additionally, please react this article about implementation of [react layout pattern](https://www.tomasgildev.com/posts/next-persistent-layout-typescript).
 
 ## Naming rules
 
